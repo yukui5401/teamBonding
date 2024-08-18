@@ -28,7 +28,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="sam-tab"
+        name="samTab"
         options={{
           title: "Sam Tab",
           tabBarIcon: ({ color, focused }) => (

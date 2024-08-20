@@ -48,6 +48,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="callumTab"
+        options={{
+          title: "Callum's Tab",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? "cloudy" : "cloudy-outline"} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }

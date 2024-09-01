@@ -7,7 +7,9 @@ from loguru import logger
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from router import (service_endpoints_router)
+from router import service_endpoints_router
+from router.sam_get import router as sam_router
+
 
 app = FastAPI()
 
@@ -32,6 +34,8 @@ app.add_middleware(
 )
 
 app.include_router(service_endpoints_router)
+app.include_router(sam_router)
+
 
 if __name__ == "__main__":
     uvicorn.run("main:app", port=4000, log_level="info")
